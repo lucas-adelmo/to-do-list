@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./AddCard.css"
 
+// eslint-disable-next-line react/prop-types
 export const AddCard = ({addTask}) => {
 
     const [newTask, setNewTask ] = useState('')

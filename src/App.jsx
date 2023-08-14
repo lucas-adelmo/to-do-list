@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import AddCard from './components/AddCard'
+import ListItem from './components/ListItem'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       <AddCard addTask={addTask} />
       <ul>
         {tasks.map((task, index)=>{
-          return <li key={index}>{task}</li>
+          return <ListItem key={index} task={task} />
         })}
       </ul>
       

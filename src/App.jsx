@@ -11,14 +11,22 @@ function App() {
     setTasks([...tasks, newTask])
   }
 
+  const removeTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  }
+
   return (
     <div className='App'>
       <h1>Lista de tarefas</h1>
       <AddCard addTask={addTask} />
       <ul>
-        {tasks.map((task, index)=>{
-          return <ListItem key={index} task={task} />
-        })}
+        {tasks.map((task, index)=>(
+          <ListItem 
+            key={index} 
+            task={task}
+            removeTask={() => removeTask(index)} />
+        ))}
       </ul>
       
       

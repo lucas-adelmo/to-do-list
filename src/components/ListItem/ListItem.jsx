@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './ListItem.css'
 
-export const ListItem = ({task}) => {
+// eslint-disable-next-line react/prop-types
+export const ListItem = ({task, removeTask}) => {
     const [finished, setFinished] = useState(false)
 
     const handleCheckTask = () => {
@@ -13,6 +14,9 @@ export const ListItem = ({task}) => {
         <p>{task}</p>
         <button onClick={handleCheckTask}>
           {finished ? 'Desfazer' : 'Finalizar'}
+        </button>
+        <button onClick={removeTask}>
+          Remover
         </button>
       </div>
     );

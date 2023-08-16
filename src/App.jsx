@@ -20,7 +20,7 @@ function App() {
     <div className='App'>
       <h1>Lista de tarefas</h1>
       <AddCard addTask={addTask} />
-      <ul>
+      <ul className='newTask'>
         {tasks.map((task, index)=>(
           <ListItem 
             key={index} 

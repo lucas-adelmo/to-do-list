@@ -1,13 +1,14 @@
 .card {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 10px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
 }
   
 input {
+    max-width: 100%;
     margin-bottom: 5px;
     padding: 5px;
     height: 30px;
@@ -17,7 +18,12 @@ button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 5px;
     cursor: pointer;
     height: 50px;
+}
+
+.card ul{
+    display: flex;
+    justify-content: center;
 }

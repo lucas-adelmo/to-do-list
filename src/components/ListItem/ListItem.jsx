@@ -11,13 +11,17 @@ export const ListItem = ({task, removeTask}) => {
   
     return (
       <div className={`list-item ${finished ? 'finished' : ''}`}>
-        <p>{task}</p>
-        <button onClick={handleCheckTask}>
-          {finished ? 'Desfazer' : 'Finalizar'}
-        </button>
-        <button onClick={removeTask}>
-          Remover
-        </button>
+        <span>
+          <p>{task}</p>
+        </span>
+        <span>
+          <button onClick={handleCheckTask}>
+            {finished ? 'Desfazer' : 'Finalizar'}
+          </button>
+          <button onClick={removeTask}>
+            Remover
+          </button>
+        </span>
       </div>
     );
 }
